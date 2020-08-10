@@ -1,0 +1,6 @@
+[submodule "imgui-sfml"]
+	path = imgui-sfml
+	url = https://github.com/eliasdaler/imgui-sfml
+[submodule "cimgui"]
+	path = cimgui
+	url = https://github.com/cimgui/cimgui

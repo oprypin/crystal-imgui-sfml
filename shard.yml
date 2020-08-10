@@ -1,0 +1,23 @@
+name: imgui-sfml
+version: 2.1.0
+
+authors:
+  - Oleh Prypin <oleh@pryp.in>
+
+description: |
+  Crystal bindings to ImGui-SFML
+
+development_dependencies:
+  crsfml:
+    github: oprypin/crsfml
+    branch: master
+  crimgui:
+    github: andrewoconnor/crimgui
+    commit: c081c77ec316bc49bd46cccfa7333f3102301799
+
+scripts:
+  postinstall: make
+
+license: MIT
+
+crystal: 0.25.1
