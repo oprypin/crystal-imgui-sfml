@@ -7,7 +7,7 @@ lib LibImGuiSFML
   alias SF_Event = Void
   alias SF_FloatRect = Void
   alias SF_Joystick_Axis = LibC::Int
-  alias SF_RenderTarget = Void
+  alias SF_RenderTexture = Void
   alias SF_RenderWindow = Void
   alias SF_Sprite = Void
   alias SF_Texture = Void
@@ -17,16 +17,19 @@ lib LibImGuiSFML
   alias SF_Window = Void
 
   fun ImGui_SFML_InitW(window : SF_RenderWindow*, loadDefaultFont : Bool)
-  fun ImGui_SFML_InitWT(window : SF_Window*, target : SF_RenderTarget*, loadDefaultFont : Bool)
+  fun ImGui_SFML_InitWT(window : SF_Window*, target : SF_RenderTexture*, loadDefaultFont : Bool)
+  fun ImGui_SFML_InitWW(window : SF_Window*, target : SF_RenderWindow*, loadDefaultFont : Bool)
   fun ImGui_SFML_InitWV(window : SF_Window*, displaySize : SF_Vector2f*, loadDefaultFont : Bool)
 
   fun ImGui_SFML_ProcessEvent(event : SF_Event*)
 
   fun ImGui_SFML_UpdateW(window : SF_RenderWindow*, dt : SF_Time*)
-  fun ImGui_SFML_UpdateWT(window : SF_Window*, target : SF_RenderTarget*, dt : SF_Time*)
+  fun ImGui_SFML_UpdateWT(window : SF_Window*, target : SF_RenderTexture*, dt : SF_Time*)
+  fun ImGui_SFML_UpdateWW(window : SF_Window*, target : SF_RenderWindow*, dt : SF_Time*)
   fun ImGui_SFML_UpdateVV(mousePos : SF_Vector2i*, displaySize : SF_Vector2f*, dt : SF_Time*)
 
-  fun ImGui_SFML_RenderT(target : SF_RenderTarget*)
+  fun ImGui_SFML_RenderT(target : SF_RenderTexture*)
+  fun ImGui_SFML_RenderW(target : SF_RenderWindow*)
   fun ImGui_SFML_Render()
 
   fun ImGui_SFML_Shutdown()

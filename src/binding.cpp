@@ -1,10 +1,24 @@
 #include <imgui-SFML.h>
+#include <SFML/Graphics/Color.hpp>
+#include <SFML/Graphics/Rect.hpp>
+#include <SFML/Graphics/RenderTexture.hpp>
+#include <SFML/Graphics/RenderWindow.hpp>
+#include <SFML/Graphics/Sprite.hpp>
+#include <SFML/Graphics/Texture.hpp>
+#include <SFML/System/Time.hpp>
+#include <SFML/System/Vector2.hpp>
+#include <SFML/Window/Event.hpp>
+#include <SFML/Window/Joystick.hpp>
+#include <SFML/Window/Window.hpp>
 
 extern "C" {
     void ImGui_SFML_InitW(sf::RenderWindow* window, bool loadDefaultFont) {
         ImGui::SFML::Init(*window, loadDefaultFont);
     }
-    void ImGui_SFML_InitWT(sf::Window* window, sf::RenderTarget* target, bool loadDefaultFont) {
+    void ImGui_SFML_InitWT(sf::Window* window, sf::RenderTexture* target, bool loadDefaultFont) {
+        ImGui::SFML::Init(*window, *target, loadDefaultFont);
+    }
+    void ImGui_SFML_InitWW(sf::Window* window, sf::RenderWindow* target, bool loadDefaultFont) {
         ImGui::SFML::Init(*window, *target, loadDefaultFont);
     }
     void ImGui_SFML_InitWV(sf::Window* window, const sf::Vector2f* displaySize, bool loadDefaultFont) {
@@ -18,14 +32,20 @@ extern "C" {
     void ImGui_SFML_UpdateW(sf::RenderWindow* window, const sf::Time* dt) {
         ImGui::SFML::Update(*window, *dt);
     }
-    void ImGui_SFML_UpdateWT(sf::Window* window, sf::RenderTarget* target, const sf::Time* dt) {
+    void ImGui_SFML_UpdateWT(sf::Window* window, sf::RenderTexture* target, const sf::Time* dt) {
+        ImGui::SFML::Update(*window, *target, *dt);
+    }
+    void ImGui_SFML_UpdateWW(sf::Window* window, sf::RenderWindow* target, const sf::Time* dt) {
         ImGui::SFML::Update(*window, *target, *dt);
     }
     void ImGui_SFML_UpdateVV(const sf::Vector2i* mousePos, const sf::Vector2f* displaySize, const sf::Time* dt) {
         ImGui::SFML::Update(*mousePos, *displaySize, *dt);
     }
 
-    void ImGui_SFML_RenderT(sf::RenderTarget* target) {
+    void ImGui_SFML_RenderT(sf::RenderTexture* target) {
+        ImGui::SFML::Render(*target);
+    }
+    void ImGui_SFML_RenderW(sf::RenderWindow* target) {
         ImGui::SFML::Render(*target);
     }
     void ImGui_SFML_Render() {

@@ -11,7 +11,12 @@ module ImGui
       LibImGuiSFML.ImGui_SFML_InitW(window, load_default_font)
     end
     def init(window : SF::Window, target : SF::RenderTarget, load_default_font : Bool = true)
-      LibImGuiSFML.ImGui_SFML_InitWT(window, target, load_default_font)
+      case target
+      when SF::RenderTexture
+        LibImGuiSFML.ImGui_SFML_InitWT(window, target, load_default_font)
+      when SF::RenderWindow
+        LibImGuiSFML.ImGui_SFML_InitWW(window, target, load_default_font)
+      end
     end
     def init(window : SF::Window, display_size : SF::Vector2f, load_default_font : Bool = true)
       LibImGuiSFML.ImGui_SFML_InitWV(window, display_size, load_default_font)
@@ -25,14 +30,24 @@ module ImGui
       LibImGuiSFML.ImGui_SFML_UpdateW(window, dt)
     end
     def update(window : SF::Window, target : SF::RenderTarget, dt : SF::Time)
-      LibImGuiSFML.ImGui_SFML_UpdateWT(window, target, dt)
+      case target
+      when SF::RenderTexture
+        LibImGuiSFML.ImGui_SFML_UpdateWT(window, target, dt)
+      when SF::RenderWindow
+        LibImGuiSFML.ImGui_SFML_UpdateWW(window, target, dt)
+      end
     end
     def update(mouse_pos : SF::Vector2i, display_size : SF::Vector2f, dt : SF::Time)
       LibImGuiSFML.ImGui_SFML_UpdateVV(mouse_pos, display_size, dt)
     end
 
     def render(target : SF::RenderTarget)
-      LibImGuiSFML.ImGui_SFML_RenderT(target)
+      case target
+      when SF::RenderTexture
+        LibImGuiSFML.ImGui_SFML_RenderT(target)
+      when SF::RenderWindow
+        LibImGuiSFML.ImGui_SFML_RenderW(target)
+      end
     end
     def render()
       LibImGuiSFML.ImGui_SFML_Render()

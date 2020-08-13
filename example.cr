@@ -29,7 +29,7 @@ while window.open?
 
   window.clear
   window.draw(shape)
-  ImGui::SFML.render
+  ImGui::SFML.render(window)
   window.display
 end
 
