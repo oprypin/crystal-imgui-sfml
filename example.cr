@@ -1,5 +1,5 @@
 require "crsfml"
-require "crimgui/lib"
+require "imgui"
 require "./src/imgui-sfml"
 
 window = SF::RenderWindow.new(SF::VideoMode.new(1280, 720), "ImGui + SFML = <3")
@@ -21,11 +21,11 @@ while window.open?
 
   ImGui::SFML.update(window, delta_clock.restart)
 
-  LibImGui.ig_show_demo_window(nil)
+  ImGui.show_demo_window
 
-  LibImGui.ig_begin("Hello, world!", nil, LibImGui::ImGuiWindowFlags::None)
-  LibImGui.ig_button("Look at this pretty button", ImVec2.new(0, 0))
-  LibImGui.ig_end
+  ImGui.begin("Hello, world!")
+  ImGui.button("Look at this pretty button")
+  ImGui.end
 
   window.clear
   window.draw(shape)

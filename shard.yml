@@ -11,9 +11,9 @@ development_dependencies:
   crsfml:
     github: oprypin/crsfml
     branch: master
-  crimgui:
-    github: andrewoconnor/crimgui
-    commit: c081c77ec316bc49bd46cccfa7333f3102301799
+  imgui:
+    github: oprypin/crystal-imgui
+    commit: master
 
 scripts:
   postinstall: make
