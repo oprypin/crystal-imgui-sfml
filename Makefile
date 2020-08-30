@@ -6,7 +6,7 @@ imgui_src := cimgui/imgui/imgui.h cimgui/imgui/imgui.cpp cimgui/imgui/imgui_draw
 libcimgui.so: $(obj_files)
 	$(CXX) -fPIC -shared -lsfml-graphics -lsfml-window -lsfml-system -lGL -o $@ $(obj_files)
 
-imgui_flags := -fPIC -Iimgui-sfml -Icimgui/imgui -DIMGUI_USER_CONFIG='<imconfig-SFML.h>'
+imgui_flags := -fPIC -Iimgui-sfml -Icimgui/imgui -DIMGUI_USER_CONFIG='<imconfig-SFML.h>' -DIMGUI_USE_WCHAR32
 
 %.o: cimgui/imgui/%.cpp cimgui/imgui/imgui.h
 	$(CXX) $(imgui_flags) $(CXXFLAGS) -o $@ -c $<
