@@ -13,7 +13,7 @@ development_dependencies:
     branch: master
   imgui:
     github: oprypin/crystal-imgui
-    commit: master
+    branch: master
 
 scripts:
   postinstall: make
