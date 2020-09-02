@@ -3,8 +3,14 @@ imgui_sfml_src := imgui-sfml/imgui-SFML.cpp imgui-sfml/imgui-SFML.h imgui-sfml/i
 cimgui_src := cimgui/cimgui.cpp cimgui/cimgui.h
 imgui_src := cimgui/imgui/imgui.h cimgui/imgui/imgui.cpp cimgui/imgui/imgui_draw.cpp cimgui/imgui/imgui_widgets.cpp cimgui/imgui/imgui_demo.cpp
 
+ifeq ($(shell uname -s),Darwin)
+	opengl := -framework OpenGL
+else
+	opengl := -lGL
+endif
+
 libcimgui.so: $(obj_files)
-	$(CXX) -fPIC -shared -lsfml-graphics -lsfml-window -lsfml-system -lGL -o $@ $(obj_files)
+	$(CXX) -fPIC -shared -lsfml-graphics -lsfml-window -lsfml-system $(opengl) -o $@ $(obj_files)
 
 imgui_flags := -fPIC -Iimgui-sfml -Icimgui/imgui -DIMGUI_USER_CONFIG='<imconfig-SFML.h>' -DIMGUI_USE_WCHAR32
 
