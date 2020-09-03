@@ -41,10 +41,27 @@ shards install
 
 During installation this will invoke `make` to build the C++ wrappers as object files. SFML headers are expected to be available in the default include path.
 
-Try running the example:
+### Building a project
+
+Try the example from inside the folder of *imgui-sfml*:
 
 ```bash
-crystal example.cr
+crystal build example.cr
+```
+
+Although building the example automatically added the `libcimgui.so` library (bundled with the project) to the search path, running it will require that addition to be done manually:
+
+```bash
+export LD_LIBRARY_PATH="$(pwd)"
+./example
+```
+
+For your own project, *imgui-sfml* will be in a subdirectory, so adjust this accordingly:
+
+```bash
+export LD_LIBRARY_PATH="$(pwd)/lib/imgui-sfml"
+printf 'require "crsfml"\nrequire "imgui"\nrequire "imgui-sfml"\n' >> my_project.cr
+crystal run my_project.cr
 ```
 
 ### Custom SFML location
