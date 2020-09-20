@@ -55,6 +55,9 @@ jobs:
         uses: actions/checkout@v2
         with:
           submodules: recursive
+      - name: Check code formatting
+        run: |
+          crystal tool format --check
       - name: Install shards
         run: |
           shards install

@@ -30,12 +30,12 @@ lib LibImGuiSFML
 
   fun ImGui_SFML_RenderT(target : SF_RenderTexture*)
   fun ImGui_SFML_RenderW(target : SF_RenderWindow*)
-  fun ImGui_SFML_Render()
+  fun ImGui_SFML_Render
 
-  fun ImGui_SFML_Shutdown()
+  fun ImGui_SFML_Shutdown
 
-  fun ImGui_SFML_UpdateFontTexture()
-  fun ImGui_SFML_GetFontTexture() : SF_Texture*
+  fun ImGui_SFML_UpdateFontTexture
+  fun ImGui_SFML_GetFontTexture : SF_Texture*
 
   fun ImGui_SFML_SetActiveJoystickId(joystickId : LibC::UInt)
   fun ImGui_SFML_SetJoytickDPadThreshold(threshold : LibC::Float)

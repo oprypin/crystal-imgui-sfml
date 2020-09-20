@@ -1,5 +1,6 @@
 #!/bin/sh
 
 .util/update_submodules.sh
+crystal tool format
 
 exec git diff --exit-code
