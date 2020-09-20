@@ -43,7 +43,7 @@ During installation this will invoke `make` to build the C++ wrappers as object 
 
 ### Building a project
 
-Try the example from inside the folder of *imgui-sfml*:
+Try the example from inside the folder of *crystal-imgui-sfml*:
 
 ```bash
 crystal build example.cr
@@ -56,7 +56,7 @@ export LD_LIBRARY_PATH="$(pwd)"
 ./example
 ```
 
-For your own project, *imgui-sfml* will be in a subdirectory, so adjust this accordingly:
+For your own project, *crystal-imgui-sfml* will be in a subdirectory, so adjust this accordingly:
 
 ```bash
 export LD_LIBRARY_PATH="$(pwd)/lib/imgui-sfml"

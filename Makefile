@@ -32,17 +32,17 @@ binding.o: src/binding.cpp cimgui/imgui/imgui.h $(config_src)
 .INTERMEDIATE: imgui_sfml_src
 $(imgui_sfml_src): imgui_sfml_src ;
 imgui_sfml_src:
-	git submodule update --init imgui-sfml
+	curl -s -L https://github.com/eliasdaler/imgui-sfml/archive/a924119022cb766763821ed9a2313fcbffae1ea2.tar.gz | tar -xz --strip-components=1 -C imgui-sfml
 
 .INTERMEDIATE: cimgui_src
 $(cimgui_src): cimgui_src ;
 cimgui_src:
-	git submodule update --init cimgui
+	curl -s -L https://github.com/cimgui/cimgui/archive/2d8b3fb731cfa19d506ae7ac591229e8473af3eb.tar.gz | tar -xz --strip-components=1 -C cimgui
 
 .INTERMEDIATE: imgui_src
 $(imgui_src): imgui_src ;
 imgui_src: cimgui_src
-	cd cimgui && git submodule update --init imgui
+	curl -s -L https://github.com/ocornut/imgui/archive/95c99aaa4be611716093edcb6b01146ab9483f30.tar.gz | tar -xz --strip-components=1 -C cimgui/imgui
 
 .PHONY: clean
 clean:
