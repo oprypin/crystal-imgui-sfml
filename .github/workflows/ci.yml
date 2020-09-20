@@ -64,6 +64,9 @@ jobs:
       - name: Build
         run: |
           make -j
+      - name: Build docs
+        run: |
+          .util/build_docs.sh
       - name: Build example
         run: |
           crystal build example.cr
@@ -76,3 +79,9 @@ jobs:
         run: |
           LD_LIBRARY_PATH="$(pwd):/usr/local/lib" ./example &
           pid=$!; sleep 3; kill $pid
+      - name: Deploy docs to gh-pages
+        if: github.event_name == 'push' && github.ref == 'refs/heads/master' && runner.os == 'Linux'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./docs
+          github_token: ${{ secrets.GITHUB_TOKEN }}

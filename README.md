@@ -16,6 +16,12 @@ and so both [crystal-imgui][] and [CrSFML][] will still be explicit dependencies
 
 That said, *crystal-imgui-sfml* _does_ take over some parts of the installation process from [crystal-imgui][].
 
+Documentation
+-------------
+
+* [API documentation](https://oprypin.github.io/crystal-imgui-sfml)
+* [ImGui-SFML introduction](https://github.com/eliasdaler/imgui-sfml#using-imgui-sfml-in-your-code)
+
 Installation
 ------------
 
