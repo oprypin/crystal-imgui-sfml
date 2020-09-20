@@ -89,12 +89,7 @@ ln -s /full/path/to/crystal-imgui lib/imgui
 ln -s /full/path/to/crystal-imgui-sfml lib/imgui-sfml
 ```
 
-Note, though, that the C bindings inside the _crystal-imgui-sfml_ directory must be additionally built using `make`.  
-Which, in turn, requires this repository to have been cloned with submodules:
-
-```bash
-git clone --recursive https://github.com/oprypin/crystal-imgui-sfml
-```
+Note, though, that the C bindings inside the _crystal-imgui-sfml_ directory must be additionally built using `make`.
 
 Credits
 -------

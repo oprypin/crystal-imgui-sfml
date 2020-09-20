@@ -1,0 +1,5 @@
+#!/bin/sh
+
+.util/update_submodules.sh
+
+exec git diff --exit-code
