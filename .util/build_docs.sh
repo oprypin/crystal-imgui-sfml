@@ -6,13 +6,11 @@ cd "$(dirname "$0")/.."
 
 rm -rf docs
 
-rev="$(git rev-parse HEAD)"
-
 crystal doc --project-name=crystal-imgui-sfml --project-version='' --source-refname=master
 
 cd docs
 
-find . -type f -exec sed -i -r -e 's,<a href=".*index.html">,<a href="https://github.com/oprypin/crystal-imgui-sfml">,' {} \;
+find . -type f -exec sed -i -r -e 's,<a href=".*index.html">,<a href="https://github.com/oprypin/crystal-imgui-sfml#readme">,' {} \;
 
 cat << EOF > index.html
 <!DOCTYPE HTML>
