@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.35.1">
+<meta name="crystal_docs.project_version" content="">
+<meta name="crystal_docs.project_name" content="crystal-imgui-sfml">
+
+
+<link href="css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="crystal-imgui-sfml">
+  <title>ImGui - crystal-imgui-sfml </title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="https://github.com/oprypin/crystal-imgui-sfml">
+          crystal-imgui-sfml
+        </a>
+      </h1>
+
+      <span class="project-version">
+        
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="crystal-imgui-sfml/ImGui" data-name="imgui">
+      <a href="ImGui.html">ImGui</a>
+      
+        <ul>
+  
+  <li class=" " data-id="crystal-imgui-sfml/ImGui/SFML" data-name="imgui::sfml">
+      <a href="ImGui/SFML.html">SFML</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> ImGui
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="extended-modules" class="anchor" href="#extended-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Extended Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="ImGui.html">ImGui</a></li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L4" target="_blank">
+        imgui-sfml.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#draw_line(a:SF::Vector2f,b:SF::Vector2f,col:SF::Color,thickness:Number=1.0)-instance-method" class="signature"><strong>#draw_line</strong>(a : SF::Vector2f, b : SF::Vector2f, col : SF::Color, thickness : Number = <span class="n">1.0</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#draw_rect(rect:SF::FloatRect,color:SF::Color,rounding:Number=0.0,rounding_corners:Int=15,thickness:Number=1.0)-instance-method" class="signature"><strong>#draw_rect</strong>(rect : SF::FloatRect, color : SF::Color, rounding : Number = <span class="n">0.0</span>, rounding_corners : Int = <span class="n">15</span>, thickness : Number = <span class="n">1.0</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#draw_rect_filled(rect:SF::FloatRect,color:SF::Color,rounding:Number=0.0,rounding_corners:Int=15)-instance-method" class="signature"><strong>#draw_rect_filled</strong>(rect : SF::FloatRect, color : SF::Color, rounding : Number = <span class="n">0.0</span>, rounding_corners : Int = <span class="n">15</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#image(texture:SF::Texture,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method" class="signature"><strong>#image</strong>(texture : SF::Texture, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>, border_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#image(texture:SF::Texture,size:SF::Vector2f,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method" class="signature"><strong>#image</strong>(texture : SF::Texture, size : SF::Vector2f, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>, border_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#image(texture:SF::Texture,texture_rect:SF::FloatRect,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method" class="signature"><strong>#image</strong>(texture : SF::Texture, texture_rect : SF::FloatRect, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>, border_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#image(texture:SF::Texture,size:SF::Vector2f,texture_rect:SF::FloatRect,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method" class="signature"><strong>#image</strong>(texture : SF::Texture, size : SF::Vector2f, texture_rect : SF::FloatRect, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>, border_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#image(sprite:SF::Sprite,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method" class="signature"><strong>#image</strong>(sprite : SF::Sprite, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>, border_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#image(sprite:SF::Sprite,size:SF::Vector2f,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method" class="signature"><strong>#image</strong>(sprite : SF::Sprite, size : SF::Vector2f, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>, border_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#image_button(texture:SF::Texture,frame_padding:Int=-1,bg_color:SF::Color=SF::Color::Transparent,tint_color:SF::Color=SF::Color::White):Bool-instance-method" class="signature"><strong>#image_button</strong>(texture : SF::Texture, frame_padding : Int = <span class="n">-1</span>, bg_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>) : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#image_button(texture:SF::Texture,size:SF::Vector2f,frame_padding:Int=-1,bg_color:SF::Color=SF::Color::Transparent,tint_color:SF::Color=SF::Color::White):Bool-instance-method" class="signature"><strong>#image_button</strong>(texture : SF::Texture, size : SF::Vector2f, frame_padding : Int = <span class="n">-1</span>, bg_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>) : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#image_button(sprite:SF::Sprite,frame_padding:Int=-1,bg_color:SF::Color=SF::Color::Transparent,tint_color:SF::Color=SF::Color::White):Bool-instance-method" class="signature"><strong>#image_button</strong>(sprite : SF::Sprite, frame_padding : Int = <span class="n">-1</span>, bg_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>) : Bool</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#image_button(sprite:SF::Sprite,size:SF::Vector2f,frame_padding:Int=-1,bg_color:SF::Color=SF::Color::Transparent,tint_color:SF::Color=SF::Color::White):Bool-instance-method" class="signature"><strong>#image_button</strong>(sprite : SF::Sprite, size : SF::Vector2f, frame_padding : Int = <span class="n">-1</span>, bg_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>) : Bool</a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="draw_line(a:SF::Vector2f,b:SF::Vector2f,col:SF::Color,thickness:Number=1.0)-instance-method">
+      <div class="signature">
+        
+        def <strong>draw_line</strong>(a : SF::Vector2f, b : SF::Vector2f, col : SF::Color, thickness : Number = <span class="n">1.0</span>)
+
+        <a class="method-permalink" href="#draw_line(a:SF::Vector2f,b:SF::Vector2f,col:SF::Color,thickness:Number=1.0)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L146" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="draw_rect(rect:SF::FloatRect,color:SF::Color,rounding:Number=0.0,rounding_corners:Int=15,thickness:Number=1.0)-instance-method">
+      <div class="signature">
+        
+        def <strong>draw_rect</strong>(rect : SF::FloatRect, color : SF::Color, rounding : Number = <span class="n">0.0</span>, rounding_corners : Int = <span class="n">15</span>, thickness : Number = <span class="n">1.0</span>)
+
+        <a class="method-permalink" href="#draw_rect(rect:SF::FloatRect,color:SF::Color,rounding:Number=0.0,rounding_corners:Int=15,thickness:Number=1.0)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L150" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="draw_rect_filled(rect:SF::FloatRect,color:SF::Color,rounding:Number=0.0,rounding_corners:Int=15)-instance-method">
+      <div class="signature">
+        
+        def <strong>draw_rect_filled</strong>(rect : SF::FloatRect, color : SF::Color, rounding : Number = <span class="n">0.0</span>, rounding_corners : Int = <span class="n">15</span>)
+
+        <a class="method-permalink" href="#draw_rect_filled(rect:SF::FloatRect,color:SF::Color,rounding:Number=0.0,rounding_corners:Int=15)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L154" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="image(texture:SF::Texture,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method">
+      <div class="signature">
+        
+        def <strong>image</strong>(texture : SF::Texture, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>, border_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>)
+
+        <a class="method-permalink" href="#image(texture:SF::Texture,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L106" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="image(texture:SF::Texture,size:SF::Vector2f,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method">
+      <div class="signature">
+        
+        def <strong>image</strong>(texture : SF::Texture, size : SF::Vector2f, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>, border_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>)
+
+        <a class="method-permalink" href="#image(texture:SF::Texture,size:SF::Vector2f,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L110" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="image(texture:SF::Texture,texture_rect:SF::FloatRect,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method">
+      <div class="signature">
+        
+        def <strong>image</strong>(texture : SF::Texture, texture_rect : SF::FloatRect, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>, border_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>)
+
+        <a class="method-permalink" href="#image(texture:SF::Texture,texture_rect:SF::FloatRect,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L114" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="image(texture:SF::Texture,size:SF::Vector2f,texture_rect:SF::FloatRect,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method">
+      <div class="signature">
+        
+        def <strong>image</strong>(texture : SF::Texture, size : SF::Vector2f, texture_rect : SF::FloatRect, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>, border_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>)
+
+        <a class="method-permalink" href="#image(texture:SF::Texture,size:SF::Vector2f,texture_rect:SF::FloatRect,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L118" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="image(sprite:SF::Sprite,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method">
+      <div class="signature">
+        
+        def <strong>image</strong>(sprite : SF::Sprite, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>, border_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>)
+
+        <a class="method-permalink" href="#image(sprite:SF::Sprite,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L122" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="image(sprite:SF::Sprite,size:SF::Vector2f,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method">
+      <div class="signature">
+        
+        def <strong>image</strong>(sprite : SF::Sprite, size : SF::Vector2f, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>, border_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>)
+
+        <a class="method-permalink" href="#image(sprite:SF::Sprite,size:SF::Vector2f,tint_color:SF::Color=SF::Color::White,border_color:SF::Color=SF::Color::Transparent)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L126" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="image_button(texture:SF::Texture,frame_padding:Int=-1,bg_color:SF::Color=SF::Color::Transparent,tint_color:SF::Color=SF::Color::White):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>image_button</strong>(texture : SF::Texture, frame_padding : Int = <span class="n">-1</span>, bg_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>) : Bool
+
+        <a class="method-permalink" href="#image_button(texture:SF::Texture,frame_padding:Int=-1,bg_color:SF::Color=SF::Color::Transparent,tint_color:SF::Color=SF::Color::White):Bool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L130" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="image_button(texture:SF::Texture,size:SF::Vector2f,frame_padding:Int=-1,bg_color:SF::Color=SF::Color::Transparent,tint_color:SF::Color=SF::Color::White):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>image_button</strong>(texture : SF::Texture, size : SF::Vector2f, frame_padding : Int = <span class="n">-1</span>, bg_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>) : Bool
+
+        <a class="method-permalink" href="#image_button(texture:SF::Texture,size:SF::Vector2f,frame_padding:Int=-1,bg_color:SF::Color=SF::Color::Transparent,tint_color:SF::Color=SF::Color::White):Bool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L134" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="image_button(sprite:SF::Sprite,frame_padding:Int=-1,bg_color:SF::Color=SF::Color::Transparent,tint_color:SF::Color=SF::Color::White):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>image_button</strong>(sprite : SF::Sprite, frame_padding : Int = <span class="n">-1</span>, bg_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>) : Bool
+
+        <a class="method-permalink" href="#image_button(sprite:SF::Sprite,frame_padding:Int=-1,bg_color:SF::Color=SF::Color::Transparent,tint_color:SF::Color=SF::Color::White):Bool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L138" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="image_button(sprite:SF::Sprite,size:SF::Vector2f,frame_padding:Int=-1,bg_color:SF::Color=SF::Color::Transparent,tint_color:SF::Color=SF::Color::White):Bool-instance-method">
+      <div class="signature">
+        
+        def <strong>image_button</strong>(sprite : SF::Sprite, size : SF::Vector2f, frame_padding : Int = <span class="n">-1</span>, bg_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">Transparent</span>, tint_color : SF::Color = <span class="t">SF</span><span class="t">::</span><span class="t">Color</span><span class="t">::</span><span class="t">White</span>) : Bool
+
+        <a class="method-permalink" href="#image_button(sprite:SF::Sprite,size:SF::Vector2f,frame_padding:Int=-1,bg_color:SF::Color=SF::Color::Transparent,tint_color:SF::Color=SF::Color::White):Bool-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L142" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>

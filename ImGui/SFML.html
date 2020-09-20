@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="generator" content="Crystal Docs 0.35.1">
+<meta name="crystal_docs.project_version" content="">
+<meta name="crystal_docs.project_name" content="crystal-imgui-sfml">
+
+
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="../js/doc.js"></script>
+
+<svg class="hidden">
+  <symbol id="octicon-link" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M4 9h1v1H4c-1.5 0-3-1.69-3-3.5S2.55 3 4 3h4c1.45 0 3 1.69 3 3.5 0 1.41-.91 2.72-2 3.25V8.59c.58-.45 1-1.27 1-2.09C10 5.22 8.98 4 8 4H4c-.98 0-2 1.22-2 2.5S3 9 4 9zm9-3h-1v1h1c1 0 2 1.22 2 2.5S13.98 12 13 12H9c-.98 0-2-1.22-2-2.5 0-.83.42-1.64 1-2.09V6.25c-1.09.53-2 1.84-2 3.25C6 11.31 7.55 13 9 13h4c1.45 0 3-1.69 3-3.5S14.5 6 13 6z"></path>
+  </symbol>
+</svg>
+
+  <meta id="repository-name" content="crystal-imgui-sfml">
+  <title>ImGui::SFML - crystal-imgui-sfml </title>
+  <script type="text/javascript">
+    CrystalDocs.base_path = "../";
+  </script>
+</head>
+<body>
+
+<div class="sidebar">
+  <div class="sidebar-header">
+    <div class="search-box">
+      <input type="search" class="search-input" placeholder="Search..." spellcheck="false" aria-label="Search">
+    </div>
+
+    <div class="project-summary">
+      <h1 class="project-name">
+        <a href="https://github.com/oprypin/crystal-imgui-sfml">
+          crystal-imgui-sfml
+        </a>
+      </h1>
+
+      <span class="project-version">
+        
+      </span>
+    </div>
+  </div>
+
+  <div class="search-results" class="hidden">
+    <ul class="search-list"></ul>
+  </div>
+
+  <div class="types-list">
+    <ul>
+  
+  <li class="parent open current" data-id="crystal-imgui-sfml/ImGui" data-name="imgui">
+      <a href="../ImGui.html">ImGui</a>
+      
+        <ul>
+  
+  <li class=" current" data-id="crystal-imgui-sfml/ImGui/SFML" data-name="imgui::sfml">
+      <a href="../ImGui/SFML.html">SFML</a>
+      
+    </li>
+  
+</ul>
+
+      
+    </li>
+  
+</ul>
+
+  </div>
+</div>
+
+
+<div class="main-content">
+<h1 class="type-name">
+
+  <span class="kind">module</span> ImGui::SFML
+
+</h1>
+
+
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="extended-modules" class="anchor" href="#extended-modules">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Extended Modules
+  </h2>
+  <ul class="other-types-list">
+    
+      <li class="other-type"><a href="../ImGui/SFML.html">ImGui::SFML</a></li>
+    
+  </ul>
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="defined-in" class="anchor" href="#defined-in">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Defined in:
+  </h2>
+  
+    
+      <a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L7" target="_blank">
+        imgui-sfml.cr
+      </a>
+    
+    <br/>
+  
+
+
+
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-summary" class="anchor" href="#instance-method-summary">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Summary
+  </h2>
+  <ul class="list-summary">
+    
+      <li class="entry-summary">
+        <a href="#get_font_texture:SF::Texture-instance-method" class="signature"><strong>#get_font_texture</strong> : SF::Texture</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#init(window:SF::RenderWindow,load_default_font:Bool=true)-instance-method" class="signature"><strong>#init</strong>(window : SF::RenderWindow, load_default_font : Bool = <span class="n">true</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#init(window:SF::Window,target:SF::RenderTarget,load_default_font:Bool=true)-instance-method" class="signature"><strong>#init</strong>(window : SF::Window, target : SF::RenderTarget, load_default_font : Bool = <span class="n">true</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#init(window:SF::Window,display_size:SF::Vector2f,load_default_font:Bool=true)-instance-method" class="signature"><strong>#init</strong>(window : SF::Window, display_size : SF::Vector2f, load_default_font : Bool = <span class="n">true</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#process_event(event:SF::Event)-instance-method" class="signature"><strong>#process_event</strong>(event : SF::Event)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#render(target:SF::RenderTarget)-instance-method" class="signature"><strong>#render</strong>(target : SF::RenderTarget)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#render-instance-method" class="signature"><strong>#render</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_active_joystick_id(joystick_id:Int)-instance-method" class="signature"><strong>#set_active_joystick_id</strong>(joystick_id : Int)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_dpad_x_axis(dpad_x_axis:SF::Joystick::Axis,inverted:Bool=false)-instance-method" class="signature"><strong>#set_dpad_x_axis</strong>(dpad_x_axis : SF::Joystick::Axis, inverted : Bool = <span class="n">false</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_dpad_y_axis(dpad_y_axis:SF::Joystick::Axis,inverted:Bool=false)-instance-method" class="signature"><strong>#set_dpad_y_axis</strong>(dpad_y_axis : SF::Joystick::Axis, inverted : Bool = <span class="n">false</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_joystick_dpad_threshold(threshold:Number)-instance-method" class="signature"><strong>#set_joystick_dpad_threshold</strong>(threshold : Number)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_joystick_l_stick_threshold(threshold:Number)-instance-method" class="signature"><strong>#set_joystick_l_stick_threshold</strong>(threshold : Number)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_joystick_mapping(action:Number,joystick_button:Number)-instance-method" class="signature"><strong>#set_joystick_mapping</strong>(action : Number, joystick_button : Number)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#set_l_stick_x_axis(l_stick_y_axis:SF::Joystick::Axis,inverted:Bool=false)-instance-method" class="signature"><strong>#set_l_stick_x_axis</strong>(l_stick_y_axis : SF::Joystick::Axis, inverted : Bool = <span class="n">false</span>)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#shutdown-instance-method" class="signature"><strong>#shutdown</strong></a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update(window:SF::RenderWindow,dt:SF::Time)-instance-method" class="signature"><strong>#update</strong>(window : SF::RenderWindow, dt : SF::Time)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update(mouse_pos:SF::Vector2i,display_size:SF::Vector2f,dt:SF::Time)-instance-method" class="signature"><strong>#update</strong>(mouse_pos : SF::Vector2i, display_size : SF::Vector2f, dt : SF::Time)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update(window:SF::Window,target:SF::RenderTarget,dt:SF::Time)-instance-method" class="signature"><strong>#update</strong>(window : SF::Window, target : SF::RenderTarget, dt : SF::Time)</a>
+        
+      </li>
+    
+      <li class="entry-summary">
+        <a href="#update_font_texture-instance-method" class="signature"><strong>#update_font_texture</strong></a>
+        
+      </li>
+    
+  </ul>
+
+
+
+
+
+<div class="methods-inherited">
+  
+</div>
+
+
+
+
+
+
+  <h2>
+    <a id="instance-method-detail" class="anchor" href="#instance-method-detail">
+  <svg class="octicon-link" aria-hidden="true">
+    <use href="#octicon-link"/>
+  </svg>
+</a>
+    Instance Method Detail
+  </h2>
+  
+    <div class="entry-detail" id="get_font_texture:SF::Texture-instance-method">
+      <div class="signature">
+        
+        def <strong>get_font_texture</strong> : SF::Texture
+
+        <a class="method-permalink" href="#get_font_texture:SF::Texture-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L69" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="init(window:SF::RenderWindow,load_default_font:Bool=true)-instance-method">
+      <div class="signature">
+        
+        def <strong>init</strong>(window : SF::RenderWindow, load_default_font : Bool = <span class="n">true</span>)
+
+        <a class="method-permalink" href="#init(window:SF::RenderWindow,load_default_font:Bool=true)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L10" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="init(window:SF::Window,target:SF::RenderTarget,load_default_font:Bool=true)-instance-method">
+      <div class="signature">
+        
+        def <strong>init</strong>(window : SF::Window, target : SF::RenderTarget, load_default_font : Bool = <span class="n">true</span>)
+
+        <a class="method-permalink" href="#init(window:SF::Window,target:SF::RenderTarget,load_default_font:Bool=true)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L14" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="init(window:SF::Window,display_size:SF::Vector2f,load_default_font:Bool=true)-instance-method">
+      <div class="signature">
+        
+        def <strong>init</strong>(window : SF::Window, display_size : SF::Vector2f, load_default_font : Bool = <span class="n">true</span>)
+
+        <a class="method-permalink" href="#init(window:SF::Window,display_size:SF::Vector2f,load_default_font:Bool=true)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L23" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="process_event(event:SF::Event)-instance-method">
+      <div class="signature">
+        
+        def <strong>process_event</strong>(event : SF::Event)
+
+        <a class="method-permalink" href="#process_event(event:SF::Event)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L27" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="render(target:SF::RenderTarget)-instance-method">
+      <div class="signature">
+        
+        def <strong>render</strong>(target : SF::RenderTarget)
+
+        <a class="method-permalink" href="#render(target:SF::RenderTarget)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L48" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="render-instance-method">
+      <div class="signature">
+        
+        def <strong>render</strong>
+
+        <a class="method-permalink" href="#render-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L57" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_active_joystick_id(joystick_id:Int)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_active_joystick_id</strong>(joystick_id : Int)
+
+        <a class="method-permalink" href="#set_active_joystick_id(joystick_id:Int)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L73" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_dpad_x_axis(dpad_x_axis:SF::Joystick::Axis,inverted:Bool=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_dpad_x_axis</strong>(dpad_x_axis : SF::Joystick::Axis, inverted : Bool = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#set_dpad_x_axis(dpad_x_axis:SF::Joystick::Axis,inverted:Bool=false)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L89" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_dpad_y_axis(dpad_y_axis:SF::Joystick::Axis,inverted:Bool=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_dpad_y_axis</strong>(dpad_y_axis : SF::Joystick::Axis, inverted : Bool = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#set_dpad_y_axis(dpad_y_axis:SF::Joystick::Axis,inverted:Bool=false)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L93" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_joystick_dpad_threshold(threshold:Number)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_joystick_dpad_threshold</strong>(threshold : Number)
+
+        <a class="method-permalink" href="#set_joystick_dpad_threshold(threshold:Number)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L77" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_joystick_l_stick_threshold(threshold:Number)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_joystick_l_stick_threshold</strong>(threshold : Number)
+
+        <a class="method-permalink" href="#set_joystick_l_stick_threshold(threshold:Number)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L81" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_joystick_mapping(action:Number,joystick_button:Number)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_joystick_mapping</strong>(action : Number, joystick_button : Number)
+
+        <a class="method-permalink" href="#set_joystick_mapping(action:Number,joystick_button:Number)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L85" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="set_l_stick_x_axis(l_stick_y_axis:SF::Joystick::Axis,inverted:Bool=false)-instance-method">
+      <div class="signature">
+        
+        def <strong>set_l_stick_x_axis</strong>(l_stick_y_axis : SF::Joystick::Axis, inverted : Bool = <span class="n">false</span>)
+
+        <a class="method-permalink" href="#set_l_stick_x_axis(l_stick_y_axis:SF::Joystick::Axis,inverted:Bool=false)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L101" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="shutdown-instance-method">
+      <div class="signature">
+        
+        def <strong>shutdown</strong>
+
+        <a class="method-permalink" href="#shutdown-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L61" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update(window:SF::RenderWindow,dt:SF::Time)-instance-method">
+      <div class="signature">
+        
+        def <strong>update</strong>(window : SF::RenderWindow, dt : SF::Time)
+
+        <a class="method-permalink" href="#update(window:SF::RenderWindow,dt:SF::Time)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L31" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update(mouse_pos:SF::Vector2i,display_size:SF::Vector2f,dt:SF::Time)-instance-method">
+      <div class="signature">
+        
+        def <strong>update</strong>(mouse_pos : SF::Vector2i, display_size : SF::Vector2f, dt : SF::Time)
+
+        <a class="method-permalink" href="#update(mouse_pos:SF::Vector2i,display_size:SF::Vector2f,dt:SF::Time)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L44" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update(window:SF::Window,target:SF::RenderTarget,dt:SF::Time)-instance-method">
+      <div class="signature">
+        
+        def <strong>update</strong>(window : SF::Window, target : SF::RenderTarget, dt : SF::Time)
+
+        <a class="method-permalink" href="#update(window:SF::Window,target:SF::RenderTarget,dt:SF::Time)-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L35" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+    <div class="entry-detail" id="update_font_texture-instance-method">
+      <div class="signature">
+        
+        def <strong>update_font_texture</strong>
+
+        <a class="method-permalink" href="#update_font_texture-instance-method">#</a>
+      </div>
+      
+      <br/>
+      <div>
+        
+          [<a href="https://github.com/oprypin/crystal-imgui-sfml/blob/master/src/imgui-sfml.cr#L65" target="_blank">View source</a>]
+        
+      </div>
+    </div>
+  
+
+
+
+
+</div>
+
+</body>
+</html>
