@@ -9,6 +9,9 @@ ImGui::SFML.init(window)
 shape = SF::CircleShape.new(100)
 shape.fill_color = SF::Color::Green
 
+buf = ImGui::TextBuffer.new(100)
+f = 0.6f32
+
 delta_clock = SF::Clock.new
 while window.open?
   while (event = window.poll_event)
@@ -24,7 +27,11 @@ while window.open?
   ImGui.show_demo_window
 
   ImGui.begin("Hello, world!")
-  ImGui.button("Look at this pretty button")
+  if ImGui.button("Save")
+    p! buf.to_s, f # Executed when the button gets clicked
+  end
+  ImGui.input_text("string", buf)
+  ImGui.slider_float("float", pointerof(f), 0.0, 1.0)
   ImGui.end
 
   window.clear
