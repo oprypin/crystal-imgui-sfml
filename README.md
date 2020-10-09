@@ -9,7 +9,7 @@ This library makes it straightforward to
 &nbsp; use [Dear ImGui][imgui] (through its [crystal-imgui][] binding)  
 &nbsp; with [SFML][] (through its [CrSFML][] binding).
 
-**See the [example](example.cr).**
+**See the [example](examples/simple.cr).**
 
 *crystal-imgui-sfml* does _not_ attempt to serve as a _wrapper_ for all of these, rather it's just the "glue",  
 and so both [crystal-imgui][] and [CrSFML][] will still be explicit dependencies of your project.
@@ -52,7 +52,7 @@ During installation this will invoke `make` to build the C++ wrappers as object 
 Try the example from inside the folder of *crystal-imgui-sfml*:
 
 ```bash
-crystal build example.cr
+crystal build examples/simple.cr
 ```
 
 Although building the example automatically added the `libcimgui.so` library (bundled with the project) to the search path, running it will require that addition to be done manually:

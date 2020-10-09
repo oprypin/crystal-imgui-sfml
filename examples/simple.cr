@@ -1,6 +1,6 @@
 require "crsfml"
 require "imgui"
-require "./src/imgui-sfml"
+require "../src/imgui-sfml"
 
 window = SF::RenderWindow.new(SF::VideoMode.new(1280, 720), "ImGui + SFML = <3")
 window.framerate_limit = 60

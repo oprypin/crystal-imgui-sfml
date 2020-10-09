@@ -68,9 +68,9 @@ jobs:
       - name: Build docs
         run: |
           .util/build_docs.sh
-      - name: Build example
+      - name: Build examples
         run: |
-          crystal build example.cr
+          echo examples/*.cr | xargs -n1 -t crystal build
       - name: Start virtual display
         if: runner.os == 'Linux'
         run: |
@@ -78,7 +78,7 @@ jobs:
           Xvfb :99 -screen 0 1024x768x24 +extension GLX &
       - name: Run example
         run: |
-          LD_LIBRARY_PATH="$(pwd):/usr/local/lib" ./example &
+          LD_LIBRARY_PATH="$(pwd):/usr/local/lib" ./simple &
           pid=$!; sleep 3; kill $pid
       - name: Deploy docs to gh-pages
         if: github.event_name == 'push' && github.ref == 'refs/heads/master' && runner.os == 'Linux'
