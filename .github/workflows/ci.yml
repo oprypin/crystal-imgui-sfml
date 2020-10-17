@@ -67,7 +67,7 @@ jobs:
           make -j
       - name: Build docs
         run: |
-          .util/build_docs.sh
+          .tools/build_docs.sh
       - name: Build examples
         run: |
           echo examples/*.cr | xargs -n1 -t crystal build
