@@ -74,7 +74,7 @@ jobs:
       - name: Start virtual display
         if: runner.os == 'Linux'
         run: |
-          echo "::set-env name=DISPLAY:::99.0"
+          echo "DISPLAY=:99.0" >>$GITHUB_ENV
           Xvfb :99 -screen 0 1024x768x24 +extension GLX &
       - name: Run example
         run: |
