@@ -1,6 +1,7 @@
 cl /c -I. -Iimgui-sfml -Icimgui\imgui -DIMGUI_USER_CONFIG="<crystal-imgui-sfml.h>" /Foimgui.obj cimgui/imgui/imgui.cpp
 cl /c -I. -Iimgui-sfml -Icimgui\imgui -DIMGUI_USER_CONFIG="<crystal-imgui-sfml.h>" /Foimgui_draw.obj cimgui/imgui/imgui_draw.cpp
 cl /c -I. -Iimgui-sfml -Icimgui\imgui -DIMGUI_USER_CONFIG="<crystal-imgui-sfml.h>" /Foimgui_widgets.obj cimgui/imgui/imgui_widgets.cpp
+cl /c -I. -Iimgui-sfml -Icimgui\imgui -DIMGUI_USER_CONFIG="<crystal-imgui-sfml.h>" /Foimgui_tables.obj cimgui/imgui/imgui_tables.cpp
 cl /c -I. -Iimgui-sfml -Icimgui\imgui -DIMGUI_USER_CONFIG="<crystal-imgui-sfml.h>" /Foimgui_demo.obj cimgui/imgui/imgui_demo.cpp
 cl /c -I. -Iimgui-sfml -Icimgui\imgui -DIMGUI_USER_CONFIG="<crystal-imgui-sfml.h>" /Focimgui.obj cimgui/cimgui.cpp
 cl /c -I. -Iimgui-sfml -Icimgui\imgui -DIMGUI_USER_CONFIG="<crystal-imgui-sfml.h>" /Foimgui-sfml.obj imgui-sfml/imgui-SFML.cpp

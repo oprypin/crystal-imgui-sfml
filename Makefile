@@ -1,8 +1,8 @@
-obj_files := imgui.o imgui_draw.o imgui_widgets.o imgui_demo.o cimgui.o imgui-sfml.o binding.o
+obj_files := imgui.o imgui_draw.o imgui_widgets.o imgui_tables.o imgui_demo.o cimgui.o imgui-sfml.o binding.o
 config_src := crystal-imgui-sfml.h imgui-sfml/imconfig-SFML.h imgui-sfml/imgui-SFML_export.h
 imgui_sfml_src := imgui-sfml/imgui-SFML.cpp imgui-sfml/imgui-SFML.h imgui-sfml/imgui-SFML_export.h imgui-sfml/imconfig-SFML.h
 cimgui_src := cimgui/cimgui.cpp cimgui/cimgui.h
-imgui_src := cimgui/imgui/imgui.h cimgui/imgui/imgui.cpp cimgui/imgui/imgui_draw.cpp cimgui/imgui/imgui_widgets.cpp cimgui/imgui/imgui_demo.cpp
+imgui_src := cimgui/imgui/imgui.h cimgui/imgui/imgui.cpp cimgui/imgui/imgui_draw.cpp cimgui/imgui/imgui_widgets.cpp cimgui/imgui/imgui_tables.cpp cimgui/imgui/imgui_demo.cpp
 
 ifeq ($(shell uname -s),Darwin)
 	opengl := -framework OpenGL
