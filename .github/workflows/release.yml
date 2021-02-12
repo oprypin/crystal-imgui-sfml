@@ -1,0 +1,34 @@
+name: CI (release)
+
+on:
+  push:
+    branches: [master]
+  schedule:
+    - cron: '0 6 * * 6'
+
+jobs:
+  try:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install Crystal
+        uses: oprypin/install-crystal@v1
+      - name: Install SFML
+        uses: oprypin/install-sfml@v1
+        with:
+          sfml: '2.5.1'
+      - name: Create a shard file
+        run: |
+          crystal init lib test
+          cat >>test/shard.yml <<EOF
+          dependencies:
+            crsfml:
+              github: oprypin/crsfml
+            imgui:
+              github: oprypin/crystal-imgui
+            imgui-sfml:
+              github: oprypin/crystal-imgui-sfml
+          EOF
+      - name: Install as shard
+        run: |
+          shards install
+        working-directory: test

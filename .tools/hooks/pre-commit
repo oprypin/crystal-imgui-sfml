@@ -1,6 +1,8 @@
 #!/bin/sh
 
-.tools/update_submodules.sh
+set -e
+
+.tools/update_submodules.py
 crystal tool format
 
-exec git diff --exit-code
+git diff --exit-code
