@@ -95,11 +95,12 @@ extern "C" {
     void ImGui_ImageTVCC(const sf::Texture* texture, const sf::Vector2f* size, const sf::Color* tintColor, const sf::Color* borderColor) {
         ImGui::Image(*texture, *size, *tintColor, *borderColor);
     }
-    void ImGui_ImageTRCC(const sf::Texture* texture, const sf::FloatRect* textureRect, const sf::Color* tintColor, const sf::Color* borderColor) {
-        ImGui::Image(*texture, *textureRect, *tintColor, *borderColor);
+
+    void ImGui_ImageRCC(const sf::RenderTexture* texture, const sf::Color* tintColor, const sf::Color* borderColor) {
+        ImGui::Image(*texture, *tintColor, *borderColor);
     }
-    void ImGui_ImageTVRCC(const sf::Texture* texture, const sf::Vector2f* size, const sf::FloatRect* textureRect, const sf::Color* tintColor, const sf::Color* borderColor) {
-        ImGui::Image(*texture, *size, *textureRect, *tintColor, *borderColor);
+    void ImGui_ImageRVCC(const sf::RenderTexture* texture, const sf::Vector2f* size, const sf::Color* tintColor, const sf::Color* borderColor) {
+        ImGui::Image(*texture, *size, *tintColor, *borderColor);
     }
 
     void ImGui_ImageSCC(const sf::Sprite* sprite, const sf::Color* tintColor, const sf::Color* borderColor) {
@@ -113,6 +114,13 @@ extern "C" {
         return ImGui::ImageButton(*texture, framePadding, *bgColor, *tintColor);
     }
     bool ImGui_ImageButtonTVICC(const sf::Texture* texture, const sf::Vector2f* size, const int framePadding, const sf::Color* bgColor, const sf::Color* tintColor) {
+        return ImGui::ImageButton(*texture, *size, framePadding, *bgColor, *tintColor);
+    }
+
+    bool ImGui_ImageButtonRICC(const sf::RenderTexture* texture, const int framePadding, const sf::Color* bgColor, const sf::Color* tintColor) {
+        return ImGui::ImageButton(*texture, framePadding, *bgColor, *tintColor);
+    }
+    bool ImGui_ImageButtonRVICC(const sf::RenderTexture* texture, const sf::Vector2f* size, const int framePadding, const sf::Color* bgColor, const sf::Color* tintColor) {
         return ImGui::ImageButton(*texture, *size, framePadding, *bgColor, *tintColor);
     }
 
