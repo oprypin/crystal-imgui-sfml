@@ -111,12 +111,12 @@ module ImGui
     LibImGuiSFML.ImGui_ImageTVCC(texture, size, tint_color, border_color)
   end
 
-  def image(texture : SF::Texture, texture_rect : SF::FloatRect, tint_color : SF::Color = SF::Color::White, border_color : SF::Color = SF::Color::Transparent)
-    LibImGuiSFML.ImGui_ImageTRCC(texture, texture_rect, tint_color, border_color)
+  def image(texture : SF::RenderTexture, tint_color : SF::Color = SF::Color::White, border_color : SF::Color = SF::Color::Transparent)
+    LibImGuiSFML.ImGui_ImageRCC(texture, tint_color, border_color)
   end
 
-  def image(texture : SF::Texture, size : SF::Vector2f, texture_rect : SF::FloatRect, tint_color : SF::Color = SF::Color::White, border_color : SF::Color = SF::Color::Transparent)
-    LibImGuiSFML.ImGui_ImageTVRCC(texture, size, texture_rect, tint_color, border_color)
+  def image(texture : SF::RenderTexture, size : SF::Vector2f, tint_color : SF::Color = SF::Color::White, border_color : SF::Color = SF::Color::Transparent)
+    LibImGuiSFML.ImGui_ImageRVCC(texture, size, tint_color, border_color)
   end
 
   def image(sprite : SF::Sprite, tint_color : SF::Color = SF::Color::White, border_color : SF::Color = SF::Color::Transparent)
@@ -133,6 +133,14 @@ module ImGui
 
   def image_button(texture : SF::Texture, size : SF::Vector2f, frame_padding : Int = -1, bg_color : SF::Color = SF::Color::Transparent, tint_color : SF::Color = SF::Color::White) : Bool
     LibImGuiSFML.ImGui_ImageButtonTVICC(texture, size, frame_padding.to_i, bg_color, tint_color)
+  end
+
+  def image_button(texture : SF::RenderTexture, frame_padding : Int = -1, bg_color : SF::Color = SF::Color::Transparent, tint_color : SF::Color = SF::Color::White) : Bool
+    LibImGuiSFML.ImGui_ImageButtonRICC(texture, frame_padding.to_i, bg_color, tint_color)
+  end
+
+  def image_button(texture : SF::RenderTexture, size : SF::Vector2f, frame_padding : Int = -1, bg_color : SF::Color = SF::Color::Transparent, tint_color : SF::Color = SF::Color::White) : Bool
+    LibImGuiSFML.ImGui_ImageButtonRVICC(texture, size, frame_padding.to_i, bg_color, tint_color)
   end
 
   def image_button(sprite : SF::Sprite, frame_padding : Int = -1, bg_color : SF::Color = SF::Color::Transparent, tint_color : SF::Color = SF::Color::White) : Bool

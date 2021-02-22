@@ -49,15 +49,15 @@ lib LibImGuiSFML
 
   fun ImGui_ImageTCC(texture : SF_Texture*, tintColor : SF_Color*, borderColor : SF_Color*)
   fun ImGui_ImageTVCC(texture : SF_Texture*, size : SF_Vector2f*, tintColor : SF_Color*, borderColor : SF_Color*)
-  fun ImGui_ImageTRCC(texture : SF_Texture*, textureRect : SF_FloatRect*, tintColor : SF_Color*, borderColor : SF_Color*)
-  fun ImGui_ImageTVRCC(texture : SF_Texture*, size : SF_Vector2f*, textureRect : SF_FloatRect*, tintColor : SF_Color*, borderColor : SF_Color*)
-
+  fun ImGui_ImageRCC(texture : SF_RenderTexture*, tintColor : SF_Color*, borderColor : SF_Color*)
+  fun ImGui_ImageRVCC(texture : SF_RenderTexture*, size : SF_Vector2f*, tintColor : SF_Color*, borderColor : SF_Color*)
   fun ImGui_ImageSCC(sprite : SF_Sprite*, tintColor : SF_Color*, borderColor : SF_Color*)
   fun ImGui_ImageSVCC(sprite : SF_Sprite*, size : SF_Vector2f*, tintColor : SF_Color*, borderColor : SF_Color*)
 
   fun ImGui_ImageButtonTICC(texture : SF_Texture*, framePadding : LibC::Int, bgColor : SF_Color*, tintColor : SF_Color*) : Bool
   fun ImGui_ImageButtonTVICC(texture : SF_Texture*, size : SF_Vector2f*, framePadding : LibC::Int, bgColor : SF_Color*, tintColor : SF_Color*) : Bool
-
+  fun ImGui_ImageButtonRICC(texture : SF_RenderTexture*, framePadding : LibC::Int, bgColor : SF_Color*, tintColor : SF_Color*) : Bool
+  fun ImGui_ImageButtonRVICC(texture : SF_RenderTexture*, size : SF_Vector2f*, framePadding : LibC::Int, bgColor : SF_Color*, tintColor : SF_Color*) : Bool
   fun ImGui_ImageButtonSICC(sprite : SF_Sprite*, framePadding : LibC::Int, bgColor : SF_Color*, tintColor : SF_Color*) : Bool
   fun ImGui_ImageButtonSVICC(sprite : SF_Sprite*, size : SF_Vector2f*, framePadding : LibC::Int, bgColor : SF_Color*, tintColor : SF_Color*) : Bool
 
