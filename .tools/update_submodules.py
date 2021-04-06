@@ -11,9 +11,10 @@ with open("Makefile") as f:
     content = f.read()
 
 for line in subprocess.check_output("git submodule status --recursive".split()).splitlines():
-    g = line.decode().split()
+    m = re.search(r"\b([0-9a-f]+) ([^ ]+) ", line.decode())
+    assert m
     content, n = re.subn(
-        r"\b[0-9a-f]+(\.tar.+-C ?" + g[1] + r")$", g[0] + r"\1", content, flags=re.MULTILINE
+        r"\b[0-9a-f]+(\.tar.+-C ?" + m[2] + r")$", m[1] + r"\1", content, flags=re.MULTILINE
     )
     assert n == 1
 
