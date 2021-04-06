@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 import os, os.path
 import re
@@ -14,7 +14,7 @@ for line in subprocess.check_output("git submodule status --recursive".split()).
     m = re.search(r"\b([0-9a-f]+) ([^ ]+) ", line.decode())
     assert m
     content, n = re.subn(
-        r"\b[0-9a-f]+(\.tar.+-C ?" + m[2] + r")$", m[1] + r"\1", content, flags=re.MULTILINE
+        r"\b[0-9a-f]+(\.tar.+-C ?" + m.group(2) + r")$", m.group(1) + r"\1", content, flags=re.MULTILINE
     )
     assert n == 1
 
