@@ -21,17 +21,21 @@ lib LibImGuiSFML
   fun ImGui_SFML_InitWW(window : SF_Window*, target : SF_RenderWindow*, loadDefaultFont : Bool)
   fun ImGui_SFML_InitWV(window : SF_Window*, displaySize : SF_Vector2f*, loadDefaultFont : Bool)
 
-  fun ImGui_SFML_ProcessEvent(event : SF_Event*)
+  fun ImGui_SFML_SetCurrentWindowW(window : SF_Window*)
+
+  fun ImGui_SFML_ProcessEventE(event : SF_Event*)
+  fun ImGui_SFML_ProcessEventWE(window : SF_Window*, event : SF_Event*)
 
   fun ImGui_SFML_UpdateW(window : SF_RenderWindow*, dt : SF_Time*)
   fun ImGui_SFML_UpdateWT(window : SF_Window*, target : SF_RenderTexture*, dt : SF_Time*)
   fun ImGui_SFML_UpdateWW(window : SF_Window*, target : SF_RenderWindow*, dt : SF_Time*)
   fun ImGui_SFML_UpdateVV(mousePos : SF_Vector2i*, displaySize : SF_Vector2f*, dt : SF_Time*)
 
-  fun ImGui_SFML_RenderT(target : SF_RenderTexture*)
   fun ImGui_SFML_RenderW(target : SF_RenderWindow*)
+  fun ImGui_SFML_RenderT(target : SF_RenderTexture*)
   fun ImGui_SFML_Render
 
+  fun ImGui_SFML_ShutdownW(window : SF_Window*)
   fun ImGui_SFML_Shutdown
 
   fun ImGui_SFML_UpdateFontTexture

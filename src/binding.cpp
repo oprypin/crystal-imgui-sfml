@@ -25,7 +25,14 @@ extern "C" {
         ImGui::SFML::Init(*window, *displaySize, loadDefaultFont);
     }
 
-    void ImGui_SFML_ProcessEvent(const sf::Event* event) {
+    void ImGui_SFML_SetCurrentWindowW(const sf::Window* window) {
+        ImGui::SFML::SetCurrentWindow(*window);
+    }
+
+    void ImGui_SFML_ProcessEventWE(const sf::Window* window, const sf::Event* event) {
+        ImGui::SFML::ProcessEvent(*window, *event);
+    }
+    void ImGui_SFML_ProcessEventE(const sf::Event* event) {
         ImGui::SFML::ProcessEvent(*event);
     }
 
@@ -52,6 +59,9 @@ extern "C" {
         ImGui::SFML::Render();
     }
 
+    void ImGui_SFML_ShutdownW(const sf::Window* window) {
+        ImGui::SFML::Shutdown(*window);
+    }
     void ImGui_SFML_Shutdown() {
         ImGui::SFML::Shutdown();
     }

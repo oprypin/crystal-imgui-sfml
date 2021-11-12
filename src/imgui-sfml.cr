@@ -24,8 +24,17 @@ module ImGui
       LibImGuiSFML.ImGui_SFML_InitWV(window, display_size, load_default_font)
     end
 
+    def set_current_window(window : SF::Window)
+      LibImGuiSFML.ImGui_SFML_SetCurrentWindowW(window)
+    end
+
+    def process_event(window : SF::Window, event : SF::Event)
+      LibImGuiSFML.ImGui_SFML_ProcessEventWE(window, event)
+    end
+
+    @[Deprecated("Use `process_event(Window, Event)` instead")]
     def process_event(event : SF::Event)
-      LibImGuiSFML.ImGui_SFML_ProcessEvent(event)
+      LibImGuiSFML.ImGui_SFML_ProcessEventE(event)
     end
 
     def update(window : SF::RenderWindow, dt : SF::Time)
@@ -56,6 +65,10 @@ module ImGui
 
     def render
       LibImGuiSFML.ImGui_SFML_Render
+    end
+
+    def shutdown(window : SF::Window)
+      LibImGuiSFML.ImGui_SFML_ShutdownW(window)
     end
 
     def shutdown

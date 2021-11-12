@@ -32,7 +32,7 @@ binding.o: src/binding.cpp cimgui/imgui/imgui.h $(config_src)
 .INTERMEDIATE: imgui_sfml_src
 $(imgui_sfml_src): imgui_sfml_src ;
 imgui_sfml_src:
-	curl -s -L https://github.com/eliasdaler/imgui-sfml/archive/ee41e16f36b21bc5556ef7dfe13e2df143f37531.tar.gz | tar -xz --strip-components=1 -C imgui-sfml
+	curl -s -L https://github.com/eliasdaler/imgui-sfml/archive/2eaf1fdef077e0d06b88819e29a042038a7f19ca.tar.gz | tar -xz --strip-components=1 -C imgui-sfml
 
 .INTERMEDIATE: cimgui_src
 $(cimgui_src): cimgui_src ;
