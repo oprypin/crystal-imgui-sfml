@@ -1,7 +1,7 @@
 MIT License
 
-* Copyright (c) 2020 Oleh Prypin <oleh@pryp.in>
-* Copyright (c) 2016 Elias Daler
+Copyright (c) 2020 Oleh Prypin <oleh@pryp.in>  
+Copyright (c) 2016 Elias Daler
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
