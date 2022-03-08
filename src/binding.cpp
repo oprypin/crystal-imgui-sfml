@@ -12,17 +12,17 @@
 #include <SFML/Window/Window.hpp>
 
 extern "C" {
-    void ImGui_SFML_InitW(sf::RenderWindow* window, bool loadDefaultFont) {
-        ImGui::SFML::Init(*window, loadDefaultFont);
+    bool ImGui_SFML_InitW(sf::RenderWindow* window, bool loadDefaultFont) {
+        return ImGui::SFML::Init(*window, loadDefaultFont);
     }
-    void ImGui_SFML_InitWT(sf::Window* window, sf::RenderTexture* target, bool loadDefaultFont) {
-        ImGui::SFML::Init(*window, *target, loadDefaultFont);
+    bool ImGui_SFML_InitWT(sf::Window* window, sf::RenderTexture* target, bool loadDefaultFont) {
+        return ImGui::SFML::Init(*window, *target, loadDefaultFont);
     }
-    void ImGui_SFML_InitWW(sf::Window* window, sf::RenderWindow* target, bool loadDefaultFont) {
-        ImGui::SFML::Init(*window, *target, loadDefaultFont);
+    bool ImGui_SFML_InitWW(sf::Window* window, sf::RenderWindow* target, bool loadDefaultFont) {
+        return ImGui::SFML::Init(*window, *target, loadDefaultFont);
     }
-    void ImGui_SFML_InitWV(sf::Window* window, const sf::Vector2f* displaySize, bool loadDefaultFont) {
-        ImGui::SFML::Init(*window, *displaySize, loadDefaultFont);
+    bool ImGui_SFML_InitWV(sf::Window* window, const sf::Vector2f* displaySize, bool loadDefaultFont) {
+        return ImGui::SFML::Init(*window, *displaySize, loadDefaultFont);
     }
 
     void ImGui_SFML_SetCurrentWindowW(const sf::Window* window) {
@@ -66,8 +66,8 @@ extern "C" {
         ImGui::SFML::Shutdown();
     }
 
-    void ImGui_SFML_UpdateFontTexture() {
-        ImGui::SFML::UpdateFontTexture();
+    bool ImGui_SFML_UpdateFontTexture() {
+        return ImGui::SFML::UpdateFontTexture();
     }
     sf::Texture* ImGui_SFML_GetFontTexture() {
         return &ImGui::SFML::GetFontTexture();

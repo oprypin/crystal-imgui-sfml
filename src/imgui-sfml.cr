@@ -7,25 +7,34 @@ module ImGui
   module SFML
     extend self
 
+    class InitError < Exception
+    end
+
     def init(window : SF::RenderWindow, load_default_font : Bool = true)
       LibImGuiSFML.ImGui_SFML_InitW(window, load_default_font)
     end
 
     def init(window : SF::Window, target : SF::RenderTarget, load_default_font : Bool = true)
-      case target
-      when SF::RenderTexture
-        LibImGuiSFML.ImGui_SFML_InitWT(window, target, load_default_font)
-      when SF::RenderWindow
-        LibImGuiSFML.ImGui_SFML_InitWW(window, target, load_default_font)
+      unless case target
+             when SF::RenderTexture
+               LibImGuiSFML.ImGui_SFML_InitWT(window, target, load_default_font)
+             when SF::RenderWindow
+               LibImGuiSFML.ImGui_SFML_InitWW(window, target, load_default_font)
+             end
+        raise InitError.new("ImGui::SFML.init failed")
       end
     end
 
     def init(window : SF::Window, display_size : SF::Vector2f, load_default_font : Bool = true)
-      LibImGuiSFML.ImGui_SFML_InitWV(window, display_size, load_default_font)
+      unless LibImGuiSFML.ImGui_SFML_InitWV(window, display_size, load_default_font)
+        raise InitError.new("ImGui::SFML.init failed")
+      end
     end
 
     def set_current_window(window : SF::Window)
-      LibImGuiSFML.ImGui_SFML_SetCurrentWindowW(window)
+      unless LibImGuiSFML.ImGui_SFML_SetCurrentWindowW(window)
+        raise InitError.new("ImGui::SFML.init failed")
+      end
     end
 
     def process_event(window : SF::Window, event : SF::Event)
@@ -76,7 +85,9 @@ module ImGui
     end
 
     def update_font_texture
-      LibImGuiSFML.ImGui_SFML_UpdateFontTexture
+      unless LibImGuiSFML.ImGui_SFML_UpdateFontTexture
+        raise InitError.new("ImGui::SFML.update_font_texture failed")
+      end
     end
 
     def get_font_texture : SF::Texture

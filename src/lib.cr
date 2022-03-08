@@ -16,10 +16,10 @@ lib LibImGuiSFML
   alias SF_Vector2i = Void
   alias SF_Window = Void
 
-  fun ImGui_SFML_InitW(window : SF_RenderWindow*, loadDefaultFont : Bool)
-  fun ImGui_SFML_InitWT(window : SF_Window*, target : SF_RenderTexture*, loadDefaultFont : Bool)
-  fun ImGui_SFML_InitWW(window : SF_Window*, target : SF_RenderWindow*, loadDefaultFont : Bool)
-  fun ImGui_SFML_InitWV(window : SF_Window*, displaySize : SF_Vector2f*, loadDefaultFont : Bool)
+  fun ImGui_SFML_InitW(window : SF_RenderWindow*, loadDefaultFont : Bool) : Bool
+  fun ImGui_SFML_InitWT(window : SF_Window*, target : SF_RenderTexture*, loadDefaultFont : Bool) : Bool
+  fun ImGui_SFML_InitWW(window : SF_Window*, target : SF_RenderWindow*, loadDefaultFont : Bool) : Bool
+  fun ImGui_SFML_InitWV(window : SF_Window*, displaySize : SF_Vector2f*, loadDefaultFont : Bool) : Bool
 
   fun ImGui_SFML_SetCurrentWindowW(window : SF_Window*)
 
@@ -38,7 +38,7 @@ lib LibImGuiSFML
   fun ImGui_SFML_ShutdownW(window : SF_Window*)
   fun ImGui_SFML_Shutdown
 
-  fun ImGui_SFML_UpdateFontTexture
+  fun ImGui_SFML_UpdateFontTexture : Bool
   fun ImGui_SFML_GetFontTexture : SF_Texture*
 
   fun ImGui_SFML_SetActiveJoystickId(joystickId : LibC::UInt)
