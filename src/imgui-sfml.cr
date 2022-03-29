@@ -106,7 +106,7 @@ module ImGui
       LibImGuiSFML.ImGui_SFML_SetJoytickLStickThreshold(threshold.to_f32)
     end
 
-    def set_joystick_mapping(action : Number, joystick_button : Number)
+    def set_joystick_mapping(action : Int, joystick_button : Int)
       LibImGuiSFML.ImGui_SFML_SetJoystickMapping(action.to_i, joystick_button.to_u)
     end
 
