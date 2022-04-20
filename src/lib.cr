@@ -42,14 +42,21 @@ lib LibImGuiSFML
   fun ImGui_SFML_GetFontTexture : SF_Texture*
 
   fun ImGui_SFML_SetActiveJoystickId(joystickId : LibC::UInt)
-  fun ImGui_SFML_SetJoytickDPadThreshold(threshold : LibC::Float)
-  fun ImGui_SFML_SetJoytickLStickThreshold(threshold : LibC::Float)
+  fun ImGui_SFML_SetJoystickDPadThreshold(threshold : LibC::Float)
+  fun ImGui_SFML_SetJoystickLStickThreshold(threshold : LibC::Float)
+  fun ImGui_SFML_SetJoystickRStickThreshold(threshold : LibC::Float)
+  fun ImGui_SFML_SetJoystickLTriggerThreshold(threshold : LibC::Float)
+  fun ImGui_SFML_SetJoystickRTriggerThreshold(threshold : LibC::Float)
 
-  fun ImGui_SFML_SetJoystickMapping(action : LibC::Int, joystickButton : LibC::UInt)
+  fun ImGui_SFML_SetJoystickMapping(key : LibC::Int, joystickButton : LibC::UInt)
   fun ImGui_SFML_SetDPadXAxis(dPadXAxis : SF_Joystick_Axis, inverted : Bool)
   fun ImGui_SFML_SetDPadYAxis(dPadYAxis : SF_Joystick_Axis, inverted : Bool)
   fun ImGui_SFML_SetLStickXAxis(lStickXAxis : SF_Joystick_Axis, inverted : Bool)
   fun ImGui_SFML_SetLStickYAxis(lStickYAxis : SF_Joystick_Axis, inverted : Bool)
+  fun ImGui_SFML_SetRStickXAxis(rStickXAxis : SF_Joystick_Axis, inverted : Bool)
+  fun ImGui_SFML_SetRStickYAxis(rStickYAxis : SF_Joystick_Axis, inverted : Bool)
+  fun ImGui_SFML_SetLTriggerAxis(lTriggerAxis : SF_Joystick_Axis)
+  fun ImGui_SFML_SetRTriggerAxis(rTriggerAxis : SF_Joystick_Axis)
 
   fun ImGui_ImageTCC(texture : SF_Texture*, tintColor : SF_Color*, borderColor : SF_Color*)
   fun ImGui_ImageTVCC(texture : SF_Texture*, size : SF_Vector2f*, tintColor : SF_Color*, borderColor : SF_Color*)

@@ -76,15 +76,24 @@ extern "C" {
     void ImGui_SFML_SetActiveJoystickId(unsigned int joystickId) {
         ImGui::SFML::SetActiveJoystickId(joystickId);
     }
-    void ImGui_SFML_SetJoytickDPadThreshold(float threshold) {
-        ImGui::SFML::SetJoytickDPadThreshold(threshold);
+    void ImGui_SFML_SetJoystickDPadThreshold(float threshold) {
+        ImGui::SFML::SetJoystickDPadThreshold(threshold);
     }
-    void ImGui_SFML_SetJoytickLStickThreshold(float threshold) {
-        ImGui::SFML::SetJoytickLStickThreshold(threshold);
+    void ImGui_SFML_SetJoystickLStickThreshold(float threshold) {
+        ImGui::SFML::SetJoystickLStickThreshold(threshold);
+    }
+    void ImGui_SFML_SetJoystickRStickThreshold(float threshold) {
+        ImGui::SFML::SetJoystickRStickThreshold(threshold);
+    }
+    void ImGui_SFML_SetJoystickLTriggerThreshold(float threshold) {
+        ImGui::SFML::SetJoystickLTriggerThreshold(threshold);
+    }
+    void ImGui_SFML_SetJoystickRTriggerThreshold(float threshold) {
+        ImGui::SFML::SetJoystickRTriggerThreshold(threshold);
     }
 
-    void ImGui_SFML_SetJoystickMapping(int action, unsigned int joystickButton) {
-        ImGui::SFML::SetJoystickMapping(action, joystickButton);
+    void ImGui_SFML_SetJoystickMapping(int key, unsigned int joystickButton) {
+        ImGui::SFML::SetJoystickMapping(key, joystickButton);
     }
     void ImGui_SFML_SetDPadXAxis(sf::Joystick::Axis dPadXAxis, bool inverted) {
         ImGui::SFML::SetDPadXAxis(dPadXAxis, inverted);
@@ -97,6 +106,18 @@ extern "C" {
     }
     void ImGui_SFML_SetLStickYAxis(sf::Joystick::Axis lStickYAxis, bool inverted) {
         ImGui::SFML::SetLStickYAxis(lStickYAxis, inverted);
+    }
+    void ImGui_SFML_SetRStickXAxis(sf::Joystick::Axis rStickXAxis, bool inverted) {
+        ImGui::SFML::SetRStickXAxis(rStickXAxis, inverted);
+    }
+    void ImGui_SFML_SetRStickYAxis(sf::Joystick::Axis rStickYAxis, bool inverted) {
+        ImGui::SFML::SetRStickYAxis(rStickYAxis, inverted);
+    }
+    void ImGui_SFML_SetLTriggerAxis(sf::Joystick::Axis lTriggerAxis) {
+        ImGui::SFML::SetLTriggerAxis(lTriggerAxis);
+    }
+    void ImGui_SFML_SetRTriggerAxis(sf::Joystick::Axis rTriggerAxis) {
+        ImGui::SFML::SetRTriggerAxis(rTriggerAxis);
     }
 
     void ImGui_ImageTCC(const sf::Texture* texture, const sf::Color* tintColor, const sf::Color* borderColor) {

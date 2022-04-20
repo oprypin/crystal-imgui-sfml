@@ -6,6 +6,10 @@ window = SF::RenderWindow.new(SF::VideoMode.new(1280, 720), "ImGui + SFML = <3")
 window.framerate_limit = 60
 ImGui::SFML.init(window)
 
+io = ImGui.get_io
+io.config_flags |= ImGui::ImGuiConfigFlags::NavEnableKeyboard
+io.config_flags |= ImGui::ImGuiConfigFlags::NavEnableGamepad
+
 shape = SF::CircleShape.new(100)
 shape.fill_color = SF::Color::Green
 

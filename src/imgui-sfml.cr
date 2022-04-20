@@ -99,15 +99,27 @@ module ImGui
     end
 
     def set_joystick_dpad_threshold(threshold : Number)
-      LibImGuiSFML.ImGui_SFML_SetJoytickDPadThreshold(threshold.to_f32)
+      LibImGuiSFML.ImGui_SFML_SetJoystickDPadThreshold(threshold.to_f32)
     end
 
     def set_joystick_l_stick_threshold(threshold : Number)
-      LibImGuiSFML.ImGui_SFML_SetJoytickLStickThreshold(threshold.to_f32)
+      LibImGuiSFML.ImGui_SFML_SetJoystickLStickThreshold(threshold.to_f32)
     end
 
-    def set_joystick_mapping(action : Int, joystick_button : Int)
-      LibImGuiSFML.ImGui_SFML_SetJoystickMapping(action.to_i, joystick_button.to_u)
+    def set_joystick_r_stick_threshold(threshold : Number)
+      LibImGuiSFML.ImGui_SFML_SetJoystickRStickThreshold(threshold.to_f32)
+    end
+
+    def set_joystick_l_trigger_threshold(threshold : Number)
+      LibImGuiSFML.ImGui_SFML_SetJoystickLTriggerThreshold(threshold.to_f32)
+    end
+
+    def set_joystick_r_trigger_threshold(threshold : Number)
+      LibImGuiSFML.ImGui_SFML_SetJoystickRTriggerThreshold(threshold.to_f32)
+    end
+
+    def set_joystick_mapping(key : Int | Enum, joystick_button : Int)
+      LibImGuiSFML.ImGui_SFML_SetJoystickMapping(key.to_i, joystick_button.to_u)
     end
 
     def set_dpad_x_axis(dpad_x_axis : SF::Joystick::Axis, inverted : Bool = false)
@@ -122,8 +134,24 @@ module ImGui
       LibImGuiSFML.ImGui_SFML_SetLStickXAxis(l_stick_x_axis, inverted)
     end
 
-    def set_l_stick_x_axis(l_stick_y_axis : SF::Joystick::Axis, inverted : Bool = false)
+    def set_l_stick_y_axis(l_stick_y_axis : SF::Joystick::Axis, inverted : Bool = false)
       LibImGuiSFML.ImGui_SFML_SetLStickYAxis(l_stick_y_axis, inverted)
+    end
+
+    def set_r_stick_x_axis(r_stick_x_axis : SF::Joystick::Axis, inverted : Bool = false)
+      LibImGuiSFML.ImGui_SFML_SetRStickXAxis(r_stick_x_axis, inverted)
+    end
+
+    def set_r_stick_y_axis(r_stick_y_axis : SF::Joystick::Axis, inverted : Bool = false)
+      LibImGuiSFML.ImGui_SFML_SetRStickYAxis(r_stick_y_axis, inverted)
+    end
+
+    def set_l_trigger_axis(l_trigger_axis : SF::Joystick::Axis)
+      LibImGuiSFML.ImGui_SFML_SetLTriggerAxis(l_trigger_axis)
+    end
+
+    def set_r_trigger_axis(r_trigger_axis : SF::Joystick::Axis)
+      LibImGuiSFML.ImGui_SFML_SetRTriggerAxis(r_trigger_axis)
     end
   end
 
