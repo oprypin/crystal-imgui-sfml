@@ -11,9 +11,9 @@ else
 endif
 
 libcimgui.so: $(obj_files)
-	$(CXX) -fPIC -shared -lsfml-graphics -lsfml-window -lsfml-system $(opengl) -o $@ $(obj_files)
+	$(CXX) -std=c++11 -fPIC -shared -lsfml-graphics -lsfml-window -lsfml-system $(opengl) -o $@ $(obj_files)
 
-config_flags := -fPIC -I. -Iimgui-sfml -Icimgui/imgui -DIMGUI_USER_CONFIG='<crystal-imgui-sfml.h>'
+config_flags := -std=c++11 -fPIC -I. -Iimgui-sfml -Icimgui/imgui -DIMGUI_USER_CONFIG='<crystal-imgui-sfml.h>'
 
 %.o: cimgui/imgui/%.cpp cimgui/imgui/imgui.h $(config_src)
 	$(CXX) $(config_flags) $(CXXFLAGS) -o $@ -c $<
