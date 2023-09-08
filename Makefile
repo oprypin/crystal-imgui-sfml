@@ -37,12 +37,12 @@ imgui_sfml_src:
 .INTERMEDIATE: cimgui_src
 $(cimgui_src): cimgui_src ;
 cimgui_src:
-	curl -s -L https://github.com/oprypin/cimgui/archive/d71f9b7e696d9a66c76ed8e90ca9ae41f54c6b07.tar.gz | tar -xz --strip-components=1 -C cimgui
+	curl -s -L https://github.com/oprypin/cimgui/archive/18afe206f901544397eee092984ac977c197368d.tar.gz | tar -xz --strip-components=1 -C cimgui
 
 .INTERMEDIATE: imgui_src
 $(imgui_src): imgui_src ;
 imgui_src: cimgui_src
-	curl -s -L https://github.com/ocornut/imgui/archive/d4ddc46e7773e9a9b68f965d007968f35ca4e09a.tar.gz | tar -xz --strip-components=1 -C cimgui/imgui
+	curl -s -L https://github.com/ocornut/imgui/archive/f7eea6387202f1174fdb7072311156d667a6826c.tar.gz | tar -xz --strip-components=1 -C cimgui/imgui
 
 .PHONY: clean
 clean:
