@@ -14,8 +14,6 @@ jobs:
         uses: oprypin/install-crystal@v1
       - name: Install SFML
         uses: oprypin/install-sfml@v1
-        with:
-          sfml: '2.5.1'
       - name: Create a shard file
         run: |
           crystal init lib test

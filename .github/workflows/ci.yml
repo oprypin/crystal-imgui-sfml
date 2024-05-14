@@ -25,8 +25,6 @@ jobs:
           crystal: ${{matrix.crystal}}
       - name: Install SFML
         uses: oprypin/install-sfml@v1
-        with:
-          sfml: '2.5.1'
       - name: Download source
         uses: actions/checkout@v4
         with:
