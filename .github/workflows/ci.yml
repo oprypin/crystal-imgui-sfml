@@ -26,7 +26,7 @@ jobs:
       - name: Install SFML
         uses: oprypin/install-sfml@v1
       - name: Download source
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: recursive
       - name: Check code formatting and generated files
@@ -56,7 +56,7 @@ jobs:
           pid=$!; sleep 3; kill $pid
       - name: Upload to GitHub Pages
         if: runner.os == 'Linux'
-        uses: actions/upload-pages-artifact@v2
+        uses: actions/upload-pages-artifact@v4
         with:
           path: docs
   deploy-docs:
@@ -69,7 +69,7 @@ jobs:
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
-        uses: actions/deploy-pages@v2
+        uses: actions/deploy-pages@v4
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
